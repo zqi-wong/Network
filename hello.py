@@ -3,7 +3,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    comments = [1,2,3,4]
+    return render_template('index.html',comments=comments)
 
 @app.route('/user/<name>')
 def user(name):
